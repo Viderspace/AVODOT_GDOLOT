@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-727dd8a0-3aef-4775-96f7-1e39b9ed35a7" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233.83 313.75">
+  <defs>
+    <style>
+      .uuid-53f6ed7d-e84f-4101-b138-611b998894a4 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="uuid-ad3d0afb-5f5f-482d-9ebe-849810e7136e" data-name="Layer 2 copy">
+    <path class="uuid-53f6ed7d-e84f-4101-b138-611b998894a4" d="m0,313.75v-81.4h24.1c3.36,0,5.99-1.11,7.91-3.35,1.92-2.23,2.88-6.26,2.88-12.11V81.4H0V0h143.18c60.44,0,90.65,38.98,90.65,116.95v196.8h-97.91V118.49c0-12.36-2.22-21.64-6.66-27.82-4.44-6.18-10.49-9.27-18.17-9.27h-7.14v130.34c0,68-21.71,102.01-65.11,102.01H0Z"/>
+  </g>
+</svg>
