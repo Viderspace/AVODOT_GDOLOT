@@ -9,13 +9,34 @@
 </head>
 
 <body>
-<div class="bottom">
+
+<header>
+    <img src="Assets/BetBerl_logo.png" class="header-logo">
+    <img src="Assets/Hamidrashs_logo.png" class="header-logo">
+</header>
+
+<section id='matter-container' class=.physics-div>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>-->
+    <!--        <script type="text/javascript" src="matter.js"></script>-->
+    <!--    <script type=text/javascript src="Letter.js"></script>-->
+    <!--    <script type=text/javascript src="LettersGenerator.js"></script>-->
+    <!--    <script type=text/javascript src="mainScript.js"></script>-->
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js" integrity="sha512-5T245ZTH0m0RfONiFm2NF0zcYcmAuNzcGyPSQ18j8Bs5Pbfhp5HP1hosrR8XRt5M3kSRqzjNMYpm2+it/AUX/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+
+<!--    <script src="https://cdn.jsdelivr.net/npm/pathseg@1.2.1/pathseg.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/poly-decomp@0.3.0/build/decomp.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.js"></script>
+    <script type=text/javascript src="JS_Scripts/mainScript.js"></script>
+</section>
+
+
+<footer>
     <form
             method="POST"
             action="https://script.google.com/macros/s/AKfycbzAGUPKG8DAwFM03Hpa2AoHOLOylwfrI4S1APy5mQLDGcEkk095C_Y_nccoWDT7vEiOtA/exec"
             id='contact-form'
     >
-        <div >
+        <div>
             <input class="FormText" name="Name" id="name" type="text"
                    placeholder=
                            "שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מל"
@@ -28,7 +49,8 @@
         </div>
         <div>
             <input class="FormText" name="Email" id="email" type="email"
-                   placeholder="מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  " required>
+                   placeholder="מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  "
+                   required>
         </div>
 
         <div>
@@ -37,32 +59,8 @@
         <!--        <label class="textBlack" for="email">Email:</label>-->
 
     </form>
-    <script type=text/javascript src="GoogleSheetHandler.js"></script>
-</div>
-
-<div id="physicsCanvas" class="fullSizeDiv">
-
-
-    <!--        <form id ='contact-form' name = 'contact-form'>-->
-    <!--    <label for="name">Name:</label>-->
-    <!--            <input id ="name" type="text" name="name-field">-->
-    <!--            <label for="email">Email:</label>-->
-    <!--            <input id = "email" type="email" name="email-field">-->
-
-    <!--        <input type="submit" value="submit" id="submit">-->
-    <!--    </form>-->
-
-
-    <div id='matter-container' class=inner>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
-        <!--    <script type="text/javascript" src="libraries/matter.js"></script>-->
-        <script type=text/javascript src="Letter.js"></script>
-        <script type=text/javascript src="mainScript.js"></script>
-
-    </div>
-
-</div>
-
+    <!--    <script type=text/javascript src="GoogleSheetHandler.js"></script>-->
+</footer>
 
 </body>
 
