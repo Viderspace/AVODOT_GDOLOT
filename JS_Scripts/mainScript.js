@@ -377,8 +377,9 @@ function collapseTimer() {
 
 
     if (collapseTime === -30) {
-        document.getElementById('bottom').scrollIntoView({behavior: "smooth"});
+        document.getElementById('bottom').scrollIntoView({behavior: "auto" });
         clearInterval(collapseInterval);
+        clearInterval(searchTouch);
 
     }
 }
@@ -414,7 +415,7 @@ let dropInterval = null ;
 
 function dropSlowly() {
     counter++
-    if (counter > 30) {
+    if (counter > 25) {
         clearInterval(dropInterval);
         return;
     }
@@ -599,6 +600,7 @@ var bodies = null;
 // Then use this bodies array in your query
 
 function searchTouches() {
+
     mousepos = mouse.position;
     if (mousepos === null) return;
     // console.log("searching touches at " + mousepos.x + " " + mousepos.y);
@@ -608,7 +610,7 @@ function searchTouches() {
     }
     var foundPhysics = Matter.Query.point(bodies, mousepos);
     letterInfo.members.forEach(member => {
-        Matter.Body.setAngle(member.body, 0);
+        if (!hasCollided)Matter.Body.setAngle(member.body, 0);
 
         if (foundPhysics.includes(member.body)) {
             member.isPointedAt(true)
@@ -618,7 +620,7 @@ function searchTouches() {
     });
 }
 
-setInterval(searchTouches, 30);
+let searchTouch =setInterval(searchTouches, 30);
 
 
 
