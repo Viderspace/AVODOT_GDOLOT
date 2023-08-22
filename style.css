@@ -10,8 +10,8 @@
 
 header{
     background-color: var(--bg-green);
-    border: solid red;
-    border-width: 2px;
+    /*border: solid red;*/
+    /*border-width: 2px;*/
     height: 80px;
     width: 100%;
     padding-top: 10px;
@@ -34,8 +34,8 @@ header{
 
 footer{
     background-color: var(--bg-green);
-    border: solid red;
-    border-width: 2px;
+    /*border: solid red;*/
+    /*border-width: 2px;*/
     height: 80px;
     width: 100%;
     buttom: 0;
@@ -53,7 +53,8 @@ footer{
     align-content: center;
     text-align: center;
     background-color: var(--text-red);
-    border: solid black;
+    /*border: solid black;*/
+    border-width: 0;
     width: 100%;
     height : auto;
 }
@@ -108,8 +109,8 @@ html, body {
     padding: 0;
     height: 100vh;
     width: 100%;
-    border-width: 3px;
-    border : solid darkblue;
+    /*border-width: 3px;*/
+    /*border : solid darkblue;*/
     overflow: hidden; /* This can prevent unexpected scrollbars */
     scroll-behavior: smooth;
     overflow-x: hidden;

@@ -1,9 +1,4 @@
 // const matterContainer = document.querySelector("#matter-container");
-const showWireframes = false;
-const lettersAreStatic = true;
-
-const matterContainer = document.getElementById("matter-container");
-const THICCNESS = 60;
 
 // module aliases
 var Engine = Matter.Engine,
@@ -13,6 +8,33 @@ var Engine = Matter.Engine,
     Composite = Matter.Composite,
     Vector = Matter.Vector,
     Bounds = Matter.Bounds;
+const showWireframes = false;
+const lettersAreStatic = true;
+
+const matterContainer = document.getElementById("matter-container");
+const THICCNESS = 60;
+
+
+let next_pos = Vector.create(matterContainer.clientWidth - 50, matterContainer.clientHeight / 2);
+let scaleWeight = .2;
+let scale = scaleWeight * responsiveScale();
+function responsiveScale()  {
+    let dynamicScale = 2;
+    next_pos =Vector.create(matterContainer.clientWidth - 50, matterContainer.clientHeight / 2);
+    if (matterContainer.clientWidth < 1400) {
+        dynamicScale = 1;
+        next_pos =Vector.create(matterContainer.clientWidth - 50, matterContainer.clientHeight / 3);
+    }
+    if (matterContainer.clientWidth < 1000) {
+        dynamicScale = 0.5;
+    }
+    if (matterContainer.clientWidth < 500) {
+        next_pos =Vector.create(matterContainer.clientWidth -20 , matterContainer.clientHeight*1 / 5);
+        dynamicScale = 0.4;
+    }
+    return dynamicScale;
+}
+
 
 // create an engine
 var engine = Engine.create();
@@ -36,8 +58,6 @@ var render = Render.create({
 // var boxB = Bodies.rectangle(450, 50, 80, 80);
 
 
-let scale = .2;
-let next_pos = Vector.create(matterContainer.clientWidth - 50, matterContainer.clientHeight / 2);
 
 let spaceBetweenLetters = 0;
 
@@ -53,8 +73,9 @@ class letterInfo {
         return Vector.create(0, 0);
     }
 
-    constructor(width, height, path, spaceFromRight = 0) {
-        this.spaceFromRight = spaceFromRight;
+    constructor(width, height, path, spaceFromRight = 0, yOffset = 0) {
+        this.spaceFromRight = spaceFromRight * responsiveScale();
+        this.yOffset = yOffset * responsiveScale();
         this.width = width;
         this.height = height;
         this.path = path;
@@ -72,7 +93,7 @@ function makeLetter(lInfo) {
         imageDims.y *= scale;
         next_pos.x -= lInfo.spaceFromRight;
         console.log("pos: " + next_pos.x + " " + next_pos.y);
-        let body = Bodies.rectangle(next_pos.x, next_pos.y, imageDims.x, imageDims.x, {
+        let body = Bodies.rectangle(next_pos.x,  next_pos.y + lInfo.yOffset, imageDims.x, imageDims.x, {
             render: {
                 sprite: {
                     texture: lInfo.path,
@@ -101,7 +122,6 @@ function makeLetter(lInfo) {
 
 
 // const ת2 = { width: 1235, height: 1438 };
-// const נק1 = { width: 466, height: 478 };
 // const נק2 = { width: 466, height: 478 };
 // const ג = { width: 773, height: 1421 };
 // const ו4 = { width: 442, height: 1420 };
@@ -114,6 +134,7 @@ firstLine = [
     new letterInfo(1154, 1468, "Assets/עבודות_גדולות_אותיות/ע.png", 0), // const ע = { width: 1154, height: 1468 };
     new letterInfo(1030, 1458, "Assets/עבודות_גדולות_אותיות/ב.png",230), // const ב = { width: 1030, height: 1458 };
     new letterInfo(480, 1469, "Assets/עבודות_גדולות_אותיות/ו1.png", 160),// const ו1 = { width: 480, height: 1469 };
+    new letterInfo(466, 478, "Assets/עבודות_גדולות_אותיות/נק1.png", 0,-200), // const נק1 = { width: 466, height: 478 };
     new letterInfo(1027, 1472, "Assets/עבודות_גדולות_אותיות/ד1.png", 160), // const ד1 = { width: 1027, height: 1472 };
     new letterInfo(508, 1450, "Assets/עבודות_גדולות_אותיות/ו2.png",160),// const ו2 = { width: 508, height: 1450 };
     new letterInfo(1104, 1482, "Assets/עבודות_גדולות_אותיות/ת1.png",173), // const ת1 = { width: 1104, height: 1482 };
@@ -130,12 +151,6 @@ function MakeFirstLine() {
 
     makeLetter(firstLine[i]);
     i++;
-    // makeLetter(firstLine[1]);
-    // makeLetter(firstLine[2]);
-    // makeLetter(firstLine[3]);
-    // makeLetter(firstLine[4]);
-    // makeLetter(firstLine[5]);
-
 }
 
 
