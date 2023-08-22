@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Minor tweaks">
-      <change afterPath="$PROJECT_DIR$/JS_Scripts/ResponsiveVector.js" afterDir="false" />
+    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Mobile demo with letters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS_Scripts/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/mainScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS_Scripts/pathseg.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
@@ -69,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1692558158093</updated>
-      <workItem from="1692558159127" duration="65822000" />
+      <workItem from="1692558159127" duration="72279000" />
     </task>
     <task id="LOCAL-00001" summary="Styling css">
       <option name="closed" value="true" />
@@ -103,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692663072339</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mobile demo with letters">
+      <option name="closed" value="true" />
+      <created>1692712673514</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692712673514</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +130,8 @@
     <MESSAGE value="Styling css" />
     <MESSAGE value="Physics &amp; Layout testing" />
     <MESSAGE value="Minor tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor tweaks" />
+    <MESSAGE value="Mobile demo with letters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mobile demo with letters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

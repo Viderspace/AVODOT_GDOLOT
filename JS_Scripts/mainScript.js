@@ -128,7 +128,6 @@ function makeLetter(lInfo, offset) {
             isStatic: lettersAreStatic,
             isSensor: !lInfo.canCollide,
         });
-        console.log("Here");
 
         lInfo.body = body;
         Composite.add(engine.world, body);
@@ -213,7 +212,7 @@ function BuildLines() {
 }
 
 
-setInterval(BuildLines, 100);
+setInterval(BuildLines, 10);
 
 
 var ground = Bodies.rectangle(
@@ -221,7 +220,9 @@ var ground = Bodies.rectangle(
     matterContainer.clientHeight + THICCNESS / 2,
     27184,
     THICCNESS,
-    {isStatic: true}
+    {isStatic: true,
+    // color: "red"
+    }
 );
 
 let leftWall = Bodies.rectangle(
@@ -302,9 +303,34 @@ function handleResize(matterContainer) {
     );
 }
 
+let collapse = false;
+let collapseTime = 5;
+let collapseInterval = null;
+
+function collapseTimer(){
+    if (!collapse ) return;
+    console.log("collapse time is " + collapseTime);
+    collapseTime--;
+    if (collapseTime === 0) {
+        collapseLetters();
+    }
+
+
+    if (collapseTime === -5){
+        document.getElementById( 'bottom' ).scrollIntoView({ behavior: "smooth" });
+        clearInterval(collapseInterval);
+
+    }
+}
+
+collapseInterval = setInterval(collapseTimer, 200);
+
 window.addEventListener("resize", () => handleResize(matterContainer));
 
+let hasCollided = false;
 function collapseLetters() {
+    if (hasCollided) return;
+    hasCollided = true;
     if (!finishedBuildingWorld) return;
     for (var i = 0; i < letterInfo.members.length; i++) {
         let body = letterInfo.members[i].body;
@@ -314,8 +340,13 @@ function collapseLetters() {
     console.log("gravity is on!");
 }
 
-window.addEventListener("touchstart", () => collapseLetters());
-window.addEventListener("mousedown", () => collapseLetters());
+function invokeCollision(){
+    collapse = true;
+
+
+}
+window.addEventListener("touchstart", () => invokeCollision());
+window.addEventListener("mousedown", () => invokeCollision());
 
 
 
