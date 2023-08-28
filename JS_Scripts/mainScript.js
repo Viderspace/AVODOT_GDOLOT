@@ -8,7 +8,7 @@ var Engine = Matter.Engine,
     Bounds = Matter.Bounds,
     Constraint = Matter.Constraint;
 const showWireframes = false;
-const lettersAreStatic = false;
+const lettersAreStatic = true;
 
 const matterContainer = document.getElementById("matter-container");
 const THICCNESS = 60;
@@ -16,7 +16,8 @@ const THICCNESS = 60;
 
 const MOBILE_THRESHOLD = 480;
 const SMALL_SCREEN_THRESHOLD = 900;
-const MEDIUM_SCREEN_THRESHOLD = 1200;
+
+const MEDIUM_SCREEN_THRESHOLD = 1199; 
 
 function ResponsiveSize(client, mobile, small, medium, large) {
     if (client < MOBILE_THRESHOLD) return mobile;
@@ -64,7 +65,7 @@ let fourthLineOffset = ResponsiveSize(matterContainer.clientWidth,
 let ResponsiveScale = ResponsiveSize(matterContainer.clientWidth, 0.4, 0.5, 1.3, 1.6);
 let scale = ResponsiveScale * 0.2;
 
-let inflateScale = 1.5;
+let inflateScale = 3;
 
 // create an engine
 var engine = Engine.create();
@@ -146,11 +147,11 @@ function putOnLeash(letter, position) {
     letter.leash = Constraint.create({
         pointA: anchor,
         bodyB: letter.body,
-        length: 0.00,
-        damping: 0.01,
-        stiffness: 0.05,
+        // length: 2.5,
+        stiffness: 0.001,
+        damping: 0.05,
         render: {
-            visible: false
+            visible: true
         }
     });
 
