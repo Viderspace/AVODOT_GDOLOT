@@ -22,7 +22,7 @@ var render1 = Render.create({
     engine: engine,
     options: {
         width: container1.clientWidth,
-        height: container1.clientHeight+200,
+        height: container1.clientHeight,
         background: "transparent",
         wireframes: showWireframes,
         showAngleIndicator: false
@@ -35,13 +35,25 @@ var render1 = Render.create({
 
 
 let mousepos = Vector.create(0, 0);
+let debugCursor = Bodies.circle(0, 0, 10, {
+    isStatic: true,
+    isSensor: true,
+    render: {
+        fillStyle: "red",
+        strokeStyle: "black"
+    }
+})
+Composite.add(engine.world, debugCursor);
 
 
 container1.addEventListener("touchmove", (e) => {
-    // const query = Query.point(bodies, mouse.position);
-    // console.log(query);
-    let touchEvent = e.touches[0];
-    mousepos =Vector.create(touchEvent.pageX, touchEvent.pageY);
+    var rect = e.target.getBoundingClientRect();
+    var x = e.targetTouches[0].pageX - rect.left;
+    var y = e.targetTouches[0].pageY - rect.top;
+
+    // let touchEvent = e.touches[0];
+    mousepos =Vector.create(x, y);
+    debugCursor.position = mousepos;
     console.log("here")
 });
 // document.addEventListener('mousemove', () => {
