@@ -64,6 +64,7 @@ var runner = Runner.create();
 
 // run the engine
 Runner.run(runner, engine);
+engine.positionIterations = 10;
 
 function handleResize(container1) {
     // set canvas size to new values
