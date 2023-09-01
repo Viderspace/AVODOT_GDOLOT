@@ -3,12 +3,11 @@ const MOBILE = 480;
 const SMALL_SCREEN = 900;
 const MEDIUM_SCREEN = 1199;
 
-var Engine = Matter.Engine,
-    Render = Matter.Render,
-    Runner = Matter.Runner,
-    Composite = Matter.Composite,
+var Composite = Matter.Composite,
     Vector = Matter.Vector,
-    Constraint = Matter.Constraint;
+    Constraint = Matter.Constraint,
+    Composites = Matter.Composites,
+    Common = Matter.Common;
 
 const container = document.getElementById("matter-container");
 
@@ -57,7 +56,7 @@ let secondLineOffset = ResponsiveSize(container.clientWidth,
 
 let ResponsiveScale = ResponsiveSize(container.clientWidth, 0.4, 0.5, 1.3, 1.6);
 let scale = ResponsiveScale * 0.2;
-var colliderShrinkFactor = 1;
+var colliderShrinkFactor = 0.95;
 
 
 let inflateScale = 2
@@ -87,10 +86,29 @@ let inflateScale = 2
                 line[i].body.isSensor = true;
             }
 
+            // if (i >0){
+            //     this.tieNeighbors(line[i-1].body, line[i].body);
+            //     // { stiffness: 0.2, render: { type: 'line', anchors: false }}
+            // }
+
             // if (line[i].body == null) console.log("no body for " + line[i].path)
             // else Composite.add(engine.world, line[i].body);
         }
     }
+
+
+     tieNeighbors(letter1, letter2) {
+         let rope = Constraint.create({
+             bodyA: letter1,
+             bodyB: letter2,
+             stiffness: 0.01,
+             damping: 0.1,
+             render: {
+             }
+         });
+
+         Composite.add(engine.world, rope);
+     }
 
     constructor(render1, render2) {
 
@@ -145,9 +163,13 @@ let inflateScale = 2
         this.AddLine(this.line1);
 
         this.AddLine( this.line2);
-        // this.AddLine(world2, this.line3);
-        // this.AddLine(world2, this.line4);
+        // for(let i = 0; i < Math.min(this.line2.length, this.line1.length); i++){
+        //     this.tieNeighbors(this.line1[i].body, this.line2[i].body);
+        //
+        // }
     }
+
+
 
 
 }

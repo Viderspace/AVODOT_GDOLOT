@@ -4,35 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Static letters testing">
-      <change afterPath="$PROJECT_DIR$/JS_Scripts/KolKoreCanvas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS_Scripts/Letter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" afterDir="false" />
+    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="New Inflating/Deflating Physics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ב.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ב.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ג.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ג.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ד1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ד1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ד2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ד2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ל.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ל.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ע.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ע.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ת1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ת1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ת2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ת2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_א.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_א.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ו1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ו1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ו2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ו2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ל.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ל.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ק1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ק1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ק2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ק2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ר.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ר.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS_Scripts/ResponsiveVector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/Letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/Letter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS_Scripts/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/mainScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Letter.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +27,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -119,7 +97,7 @@
       <workItem from="1692558159127" duration="96902000" />
       <workItem from="1693237054729" duration="7550000" />
       <workItem from="1693350756169" duration="5053000" />
-      <workItem from="1693528240102" duration="12916000" />
+      <workItem from="1693528240102" duration="15689000" />
     </task>
     <task id="LOCAL-00001" summary="Styling css">
       <option name="closed" value="true" />
@@ -193,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693239910971</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="New Inflating/Deflating Physics">
+      <option name="closed" value="true" />
+      <created>1693541242197</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1693541242197</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +205,7 @@
     <MESSAGE value="Inflation and collision mechanics" />
     <MESSAGE value="shorter page test" />
     <MESSAGE value="Static letters testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Static letters testing" />
+    <MESSAGE value="New Inflating/Deflating Physics" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Inflating/Deflating Physics" />
   </component>
 </project>

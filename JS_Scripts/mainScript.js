@@ -1,5 +1,3 @@
-
-
 // module aliases
 var Engine = Matter.Engine,
     Render = Matter.Render,
@@ -7,6 +5,7 @@ var Engine = Matter.Engine,
     Composite = Matter.Composite,
     Vector = Matter.Vector,
     Constraint = Matter.Constraint;
+
 const showWireframes = false;
 const lettersAreStatic = false;
 
@@ -90,6 +89,16 @@ Matter.Events.on(mouseConstraint, 'mousemove', function (event) {
     }
 );
 
+
+Matter.Events.on(mouseConstraint, "touchend", function (event) {
+        //For Matter.Query.point pass "array of bodies" and "mouse position"
+        mousepos = Vector.create(0, 0)
+    }
+);
+
+
+
+
 let lettersManager = new LettersManager(render1, null);
 let letters = lettersManager.GetLetters();
 let bodies = lettersManager.GetBodies();
@@ -119,11 +128,6 @@ function searchTouches() {
         }
         var letterIsTouched = currentlyTouched.includes(letterObj.body);
         letterObj.isTouched(letterIsTouched)
-        // if (currentlyTouched.includes(letterObj.body)) {
-        //     letterObj.isPointedAt(true)
-        // } else {
-        //     letterObj.isPointedAt(false)
-        // }
     });
 }
 

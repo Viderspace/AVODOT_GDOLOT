@@ -2,10 +2,7 @@
 var Bodies = Matter.Bodies,
     Body = Matter.Body,
     Composite = Matter.Composite,
-    Vector = Matter.Vector,
-    Events = Matter.Events,
-    Constraint = Matter.Constraint;
-
+    Vector = Matter.Vector;
 //
 //
 // const MOBILE = 480;
