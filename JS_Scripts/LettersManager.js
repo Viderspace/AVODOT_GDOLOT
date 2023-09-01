@@ -56,7 +56,7 @@ let secondLineOffset = ResponsiveSize(container.clientWidth,
 
 let ResponsiveScale = ResponsiveSize(container.clientWidth, 0.4, 0.5, 1.3, 1.6);
 let scale = ResponsiveScale * 0.2;
-var colliderShrinkFactor = 0.8;
+var colliderShrinkFactor = 0.85;
 
 
 let inflateScale = 2

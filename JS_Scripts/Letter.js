@@ -78,7 +78,6 @@ class Letter {
 
         } catch (e) {
             console.log(e);
-            console.log("path: " + this.path);
         }
     }
 
@@ -136,13 +135,12 @@ class Letter {
     }
 
 
-    updateTime() {
+    update() {
         if (!this.canCollide)return;
         if (this.currentlyTouched) {
             this.lastBeenTouched = 0;
             this.animation = Letter.UP;
             this.inflate();
-            // this.scaleSprite(this.Scale + inflationSpeed);
         } else {
             this.lastBeenTouched++;
             if (this.lastBeenTouched > Letter.inflationDuration) {
@@ -152,8 +150,8 @@ class Letter {
         }
     }
 
-    static inflationDuration = 5;
-    static inflationRate = 10;
+    static inflationDuration = 50;
+    static inflationRate = 20;
 
     static deflationDuration = 15
     static deflationRate = 1
@@ -165,9 +163,10 @@ class Letter {
     static MaxSize = 0.2
 
     inflate() {
-        if (this.currSpriteScale > Letter.MaxSize) return;
+        // if (this.currSpriteScale > Letter.MaxSize) return;
         if (this.animation !== Letter.UP  ) return;
-        if (this.timer > Letter.inflationRate) {
+        this.currentlyTouched = false
+        if (this.currSpriteScale > Letter.MaxSize) {
             this.animation = Letter.NONE;
             this.timer = 0;
             return;
@@ -175,7 +174,7 @@ class Letter {
 
         this.timer ++;
         var timeScale = (engine.timing.delta || (1000 / 60)) / 1000;
-        var newScale = 1 + (Letter.inflationDuration * timeScale);
+        var newScale = 1 + (Letter.inflationRate * timeScale);
         Body.scale(this.body, newScale, newScale);
         this.scaleSprite();
 
@@ -184,6 +183,7 @@ class Letter {
 
     deflate() {
         if (this.animation !== Letter.DOWN) return;
+        Matter.Body.setAngle(this.body, 0);
 
         if (this.currSize < this.initSize) {
             this.animation = Letter.NONE;
@@ -203,8 +203,7 @@ class Letter {
         let spriteNewScale = (this.currSize/ this.initSize) * this.initSpriteScale;
         this.currSpriteScale = spriteNewScale;
         // let spriteNewScale = (this.currSize/ this.initSize) * scale
-        if ( isNaN(spriteNewScale)) return;
-        console.log(spriteNewScale)
+
         this.body.render.sprite.xScale = spriteNewScale;
         this.body.render.sprite.yScale = spriteNewScale;
     }
@@ -222,7 +221,6 @@ class Letter {
 
 
         // var currSize = Math.sqrt(this.body.area) / this.width * this.height;
-        console.log(this.path + " currentSize: " + this.currSize);
 
 
         // var scale = 1 + (this.isHover ? Letter.inflationSpeed : -Letter.inflationSpeed);

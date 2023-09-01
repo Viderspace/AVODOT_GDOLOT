@@ -13,7 +13,7 @@ const container1 = document.getElementById("matter-container");
 
 // create an engine
 var engine = Engine.create();
-engine.world.gravity.y = 0.00;
+engine.world.gravity.y = 0.1;
 
 // create a renderer
 var render1 = Render.create({
@@ -90,7 +90,11 @@ Matter.Events.on(mouseConstraint, 'mousemove', function (event) {
     }
 );
 
-
+Matter.Events.on(mouseConstraint, "mouseup", function (event) {
+        //For Matter.Query.point pass "array of bodies" and "mouse position"
+        mousepos = Vector.create(0, 0)
+    }
+);
 Matter.Events.on(mouseConstraint, "touchend", function (event) {
         //For Matter.Query.point pass "array of bodies" and "mouse position"
         mousepos = Vector.create(0, 0)
@@ -111,7 +115,7 @@ function scanUserTouches(){
 }
 
 function setStraightAngle(body) {
-    Matter.Body.setAngle(body, 0);
+    // Matter.Body.setAngle(body, 0);
 
 }
 
@@ -141,15 +145,22 @@ function searchTouches() {
 
 let searchTouch = setInterval(searchTouches, 50);
 
-function updatePhysics(){
-    letters.forEach(letterObj => {
-        letterObj.updateTime();
+Matter.Events.on(runner, "afterTick", function (event) {
+        letters.forEach(letterObj => {
+        letterObj.update();
+
     });
-}
+})
 
-let updatePhysicsInterval = setInterval(updatePhysics, 20);
-
-
+// function updatePhysics(){
+//     letters.forEach(letterObj => {
+//         letterObj.updateTime();
+//     });
+// }
+//
+// let updatePhysicsInterval = setInterval(updatePhysics, 20);
+//
+//
 
 
 

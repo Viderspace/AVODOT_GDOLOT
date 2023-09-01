@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Touch Input Refinement test3">
+    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Engine Stress Test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/Letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/Letter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS_Scripts/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/mainScript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +96,7 @@
       <workItem from="1692558159127" duration="96902000" />
       <workItem from="1693237054729" duration="7550000" />
       <workItem from="1693350756169" duration="5053000" />
-      <workItem from="1693528240102" duration="16255000" />
+      <workItem from="1693528240102" duration="17910000" />
     </task>
     <task id="LOCAL-00001" summary="Styling css">
       <option name="closed" value="true" />
@@ -199,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693544310648</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Engine Stress Test">
+      <option name="closed" value="true" />
+      <created>1693544596477</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693544596477</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +240,7 @@
     <MESSAGE value="Touch Input Refinement test" />
     <MESSAGE value="Touch Input Refinement test2" />
     <MESSAGE value="Touch Input Refinement test3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Touch Input Refinement test3" />
+    <MESSAGE value="Engine Stress Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Engine Stress Test" />
   </component>
 </project>
