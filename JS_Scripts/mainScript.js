@@ -22,10 +22,10 @@ var render1 = Render.create({
     engine: engine,
     options: {
         width: container1.clientWidth,
-        height: container1.clientHeight,
+        height: container1.clientHeight +200,
         background: "transparent",
         wireframes: showWireframes,
-        showAngleIndicator: false
+        showAngleIndicator: true
     }
 });
 
@@ -46,15 +46,15 @@ let debugCursor = Bodies.circle(0, 0, 10, {
 Composite.add(engine.world, debugCursor);
 
 
+let prevMousePos = null
 container1.addEventListener("touchmove", (e) => {
     var rect = e.target.getBoundingClientRect();
     var x = e.targetTouches[0].pageX - rect.left;
     var y = e.targetTouches[0].pageY - rect.top;
 
-    // let touchEvent = e.touches[0];
+     prevMousePos = mousepos;
     mousepos =Vector.create(x, y);
     debugCursor.position = mousepos;
-    console.log("here")
 });
 // document.addEventListener('mousemove', () => {
 //     const query = Query.point(bodies, mouse.position)
@@ -170,17 +170,17 @@ function setStraightAngle(body) {
 
 function searchTouches() {
 
-    // mousepos = mouse.position;
     if (mousepos === null) return;
     if (letters === null) letters = lettersManager.GetLetters();
     console.log("mouse position: "+ mousepos.x + " " + mousepos.y)
+    checkMouseIdle(prevMousePos, mousepos);
 
-    if (mousepos.x === 0 && mousepos.y === 0) {
-        letters.forEach(letterObj => {
-                setStraightAngle(letterObj.body);
-                letterObj.isTouched(false)
-        });
-    }
+    // if (mousepos.x === 0 && mousepos.y === 0) {
+    //     letters.forEach(letterObj => {
+    //             setStraightAngle(letterObj.body);
+    //             letterObj.isTouched(false)
+    //     });
+    // }
 
     let currentlyTouched = scanUserTouches();
 
@@ -202,16 +202,27 @@ Matter.Events.on(runner, "afterTick", function (event) {
     });
 })
 
-// function updatePhysics(){
-//     letters.forEach(letterObj => {
-//         letterObj.updateTime();
-//     });
-// }
-//
-// let updatePhysicsInterval = setInterval(updatePhysics, 20);
-//
-//
+let idleTimer = 0;
+function checkMouseIdle(prev, curr){
+    if (prev === null || curr === null) return;
+    console.log("Idle timer :"+idleTimer )
 
+    if (Math.abs(prev.x -curr.x)<1 && Math.abs(prev.y - curr.y)<1){
+        idleTimer++;
+    }else {
+        idleTimer = 0;
+    }
+
+    if (idleTimer > 50){
+        console.log("Idle timer reached");
+        letters.forEach(letterObj => {
+            letterObj.isTouched(false)
+        });
+        idleTimer = 0;
+    }
+
+
+}
 
 
 
