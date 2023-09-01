@@ -8,8 +8,9 @@ var Engine = Matter.Engine,
 
 const showWireframes = false;
 const lettersAreStatic = false;
+const showConstraints = false;
 
-const container1 = document.getElementById("matter-container");
+const container1 = document.getElementById("canvas1");
 
 // create an engine
 var engine = Engine.create();
@@ -21,7 +22,7 @@ var render1 = Render.create({
     engine: engine,
     options: {
         width: container1.clientWidth,
-        height: container1.clientHeight,
+        height: container1.clientHeight+200,
         background: "transparent",
         wireframes: showWireframes,
         showAngleIndicator: false
@@ -29,16 +30,49 @@ var render1 = Render.create({
 });
 
 
-let mouse = Matter.Mouse.create(render1.canvas);
-let mouseConstraint = Matter.MouseConstraint.create(engine, {
-    mouse: mouse,
-    constraint: {
-        stiffness: 0.2,
-        render: {
-            visible: false
-        }
-    }
+// let mouse = Matter.Mouse.create(render1.canvas);
+// Matter.Mouse.clearSourceEvents(mouse);
+
+
+let mousepos = Vector.create(0, 0);
+
+
+container1.addEventListener("touchmove", (e) => {
+    // const query = Query.point(bodies, mouse.position);
+    // console.log(query);
+    let touchEvent = e.touches[0];
+    mousepos =Vector.create(touchEvent.pageX, touchEvent.pageY);
+    console.log("here")
 });
+// document.addEventListener('mousemove', () => {
+//     const query = Query.point(bodies, mouse.position)
+//     console.log(mouse.position);
+//     console.log(query);
+// });
+
+
+
+
+
+// document.addEventListener('mousemove', () => {
+//     const query = Query.point(Composite.allBodies(engine.world), mouse.position)
+//     console.log(mouse.position);
+//     console.log(query);
+// });
+// let mouseConstraint = Matter.MouseConstraint.create(engine, {
+//     mouse: mouse,
+//     constraint: {
+//         collisionFilter: {
+//             category: 0b0010
+//         },
+//         stiffness: 0.8,
+//         render: {
+//             visible: false
+//         }}});
+
+// mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
+// mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
+// Matter.World.add(engine.world, mouseConstraint);
 
 // Composite.add(engine.world, mouseConstraint);
 
@@ -51,8 +85,6 @@ let mouseConstraint = Matter.MouseConstraint.create(engine, {
 //     "DOMMouseScroll",
 //     mouseConstraint.mouse.mousewheel
 // );
-
-
 
 
 // run the renderer
@@ -82,35 +114,34 @@ window.addEventListener("resize", () => handleResize(container1));
 //     invokeCollision();
 // });
 
-let mousepos = Vector.create(0, 0);
 
-Matter.Events.on(mouseConstraint, 'mousemove', function (event) {
-        //For Matter.Query.point pass "array of bodies" and "mouse position"
-        mousepos = Vector.create(event.mouse.position.x, event.mouse.position.y)
-    }
-);
-
-Matter.Events.on(mouseConstraint, "mouseup", function (event) {
-        //For Matter.Query.point pass "array of bodies" and "mouse position"
-        mousepos = Vector.create(0, 0)
-    }
-);
-Matter.Events.on(mouseConstraint, "touchend", function (event) {
-        //For Matter.Query.point pass "array of bodies" and "mouse position"
-        mousepos = Vector.create(0, 0)
-    }
-);
+// Matter.Events.on(mouseConstraint, 'mousemove', function (event) {
+//         //For Matter.Query.point pass "array of bodies" and "mouse position"
+//         mousepos = Vector.create(event.mouse.position.x, event.mouse.position.y)
+//     }
+// );
+//
+// Matter.Events.on(mouseConstraint, "mouseup", function (event) {
+//         //For Matter.Query.point pass "array of bodies" and "mouse position"
+//         mousepos = Vector.create(0, 0)
+//     }
+// );
+// Matter.Events.on(mouseConstraint, "touchend", function (event) {
+//         //For Matter.Query.point pass "array of bodies" and "mouse position"
+//         mousepos = Vector.create(0, 0)
+//     }
+// );
 
 // add event listener
-container1.addEventListener("mouseleave", () => {
-    // fire mouseup event to let go of the dragged item
-    mouseConstraint.mouse.mouseup(event);
-});
+// container1.addEventListener("mouseleave", () => {
+//     // fire mouseup event to let go of the dragged item
+//     mouseConstraint.mouse.mouseup(event);
+// });
+//
 
 
 
-
-let lettersManager = new LettersManager(render1, null);
+let lettersManager = new LettersManager(LettersManager.LINES1AND2);
 let letters = lettersManager.GetLetters();
 let bodies = lettersManager.GetBodies();
 
@@ -127,9 +158,10 @@ function setStraightAngle(body) {
 
 function searchTouches() {
 
-    mousepos = mouse.position;
+    // mousepos = mouse.position;
     if (mousepos === null) return;
     if (letters === null) letters = lettersManager.GetLetters();
+    console.log("mouse position: "+ mousepos.x + " " + mousepos.y)
 
     if (mousepos.x === 0 && mousepos.y === 0) {
         letters.forEach(letterObj => {

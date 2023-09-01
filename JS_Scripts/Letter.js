@@ -50,6 +50,15 @@ class Letter {
 
     }
 
+    addDot(dotBody){
+        // console.log("Adding dot to " + this.path)
+        // var body = this.body;
+        // this.body = Body.create({
+        //     parts: [body,dotBody]
+        // });
+        // Composite.add(engine.world, this.body)
+    }
+
 
     makeBody(offset) {
         console.log("making letter " + this.path);
@@ -67,12 +76,12 @@ class Letter {
                     }
                 },
                 isStatic: lettersAreStatic,
-                isSensor: this.canCollide,
+                isSensor: this.canCollide(),
                 collisionFilter: {
                     category: (this.canCollide ? 0x0001 : 0x0010),
                 }
             });
-            this.putOnLeash({x: offset.x, y: offset.y + this.yOffset});
+           this.putOnLeash({x: offset.x, y: offset.y + this.yOffset});
             Composite.add(engine.world, this.body);
 
 
@@ -91,43 +100,15 @@ class Letter {
             stiffness: 0.001,
             damping: 0.5,
             render: {
-                visible: false
+                visible: showConstraints
             }
         });
 
         Composite.add(engine.world, this.leash);
     }
 
+    canCollide(){return this.yOffset <-190*ResponsiveScale;}
 
-    isPointedAt(value) {
-        if (this.body === null) return;
-        if (value === this.isPointed) return;
-        if (value) {
-            if (!this.isPointed) {
-
-                this.body.render.sprite.xScale = inflateScale * scale;
-                this.body.render.sprite.yScale = inflateScale * scale;
-                Matter.Body.scale(this.body, inflateScale, inflateScale, {
-                    x: this.body.position.x,
-                    y: this.body.position.y
-                });
-                this.isPointed = value;
-            }
-            this.timer = 0;
-        } else { // not pointed
-            this.timer += 100;
-            if (!this.isPointed) return;
-            if (this.timer > 2000) {
-                this.body.render.sprite.xScale = scale;
-                this.body.render.sprite.yScale = scale;
-                Matter.Body.scale(this.body, 1 / inflateScale, 1 / inflateScale, {
-                    x: this.body.position.x,
-                    y: this.body.position.y
-                });
-                this.isPointed = value;
-            }
-        }
-    }
 
 
     isTouched(isTouched) {
@@ -147,6 +128,18 @@ class Letter {
                 this.animation = Letter.DOWN;
                 this.deflate();
             }
+        }
+        if (this.lastBeenTouched> 50){
+            this.rotateBack()
+        }
+    }
+
+    rotateBack(){
+        let angle = this.body.angle;
+        if (Math.abs(angle) >1){
+            angle =angle + angle < 0 ? 1:-1;
+            Matter.Body.setAngle(this.body, angle);
+
         }
     }
 
@@ -206,38 +199,6 @@ class Letter {
 
         this.body.render.sprite.xScale = spriteNewScale;
         this.body.render.sprite.yScale = spriteNewScale;
-    }
-
-
-
-
-    _scaleSprite(newScale) {
-        this.currSize = Math.sqrt(this.body.area) / this.width * this.height;
-
-        // this.currentScale =  newScale >= inflateScale ? inflateScale : newScale <= scale ? scale : 1+inflationSpeed;
-        this.currentScale += newScale
-        this.body.render.sprite.xScale = this.currentScale;
-        this.body.render.sprite.yScale = this.currentScale;
-
-
-        // var currSize = Math.sqrt(this.body.area) / this.width * this.height;
-
-
-        // var scale = 1 + (this.isHover ? Letter.inflationSpeed : -Letter.inflationSpeed);
-
-
-        // if (currSize < Letter.minScale || currSize > Letter.maxScale) {
-        //     scale = 1;
-        // }
-        // if (currSize < Letter.minScale && this.Scale < prevScale) {
-        //     return
-        // } else if (currSize > Letter.maxScale && this.Scale > prevScale) {
-        //     return;
-        // }
-
-        // Body.scale(this.body,  this.currentScale, this.currentScale, Vector.create(this.body.position.x, this.body.position.y));
-        // this.Body.render.sprite.xScale = scale * this.baseScale;
-        // this.Body.render.sprite.yScale = scale * this.baseScale;
     }
 }
 

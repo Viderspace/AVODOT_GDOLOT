@@ -12,35 +12,30 @@
 :root{
     --text-red: #EE3B23;
     --bg-green: #31b44a;
+    --header-height: 80px;
 }
 
 header{
     background-color: var(--bg-green);
     position: absolute;
-    /*border: solid red;*/
-    /*border-width: 2px;*/
-    height: 80px;
+    height: var(--header-height);
     width: 100%;
-    padding-top: 10px;
+    padding-top: 10px ;
+    padding-bottom: 10px;
     z-index: 1;
-
     display: flex;
     justify-content: space-around; /* Distributes items evenly: first item is flush with the start, last item is flush with the end */
     align-items: center; /* Align items vertically in the center */
-
 }
 .header-logo{
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
-
     position: relative;
     height: inherit;
     width: auto;
 }
-
-
 form, footer{
     display: block;
     background-color: transparent;
@@ -50,14 +45,7 @@ form, footer{
     width: 100%;
     height: auto;
     z-index: 1;
-
-
-
 }
-
-
-
-
 
 .Text, .FormSend, .FormText{
     position: relative;
@@ -71,9 +59,7 @@ form, footer{
     width: 100%;
     height : auto;
 }
-
 .FormText{
-
     padding: 20px;
     padding-left: 0;
     margin-top: 0;
@@ -85,19 +71,10 @@ form, footer{
     padding-left: 0;
     margin-top: 20px;
     margin-bottom: 0;
-
 }
-
-
-
-
-
-
-
 ::placeholder {
     color: White;
     opacity: 1; /* Firefox */
-
 }
 .force-opaque::placeholder {
     opacity: 1;
@@ -112,61 +89,50 @@ html, body {
     padding: 0;
     height: 200vh;
     width: 100%;
-    border: 0 transparent;
+    /*border: 0 transparent;*/
     /*border-width: 3px;*/
     /*border : solid darkblue;*/
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+    overscroll-behavior-y: none;
     overflow-x: hidden;
-    overflow-y:auto;
+    overflow-y: auto;
 }
 
 body {
-    position: relative;
     background-color: var(--bg-green);
+    position: relative;
 
 }
 
-/*section{*/
-/*    !*background-color: var(--bg-green);*!*/
-/*    buttom : 0px;*/
+.content{
+    position: absolute;
+    background-color: #31b44a;
 
-/*    position: relative;*/
-/*    margin: 0;*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*}*/
-
-
-
-
-svg {display: none;}
-
-.physics-div{
-    /*background-color: transparent;*/
-    position: relative;
-    bottom: 0;
+    top: 100px;
+    bottom : auto;
+    height: 120vh;
     width: 100%;
-    height: 68vh;
 
+    /*border:  10px black solid ;*/
 
+}
 
+.spacer{
+    height: 14vh;
 }
 
 section {
     position: relative;
-    background-color: #31b44a;
+    /*background-color: #31b44a;*/
     /*border: 0   transparent   ;*/
-    margin: 0;
+
     /*padding-bottom: 100px;*/
     width: 100%;
-    /*height: 67vh;*/
-    height: 68vh;
-
-    /*border: 1px 10px var(--bg-green) inset;*/
-
+    height: 50vh;
     box-shadow: none;
-
 }
+
+
 
 /* Change the white to any color */
 input:-webkit-autofill,

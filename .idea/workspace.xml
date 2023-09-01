@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Organic Re-organising fx">
+    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="When mouse leaves the canvas its now releases the inflated objects to shrink back">
+      <change afterPath="$PROJECT_DIR$/JS_Scripts/SecondCanvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/Letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/Letter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS_Scripts/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/mainScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +49,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -94,7 +99,7 @@
       <workItem from="1692558159127" duration="96902000" />
       <workItem from="1693237054729" duration="7550000" />
       <workItem from="1693350756169" duration="5053000" />
-      <workItem from="1693528240102" duration="19330000" />
+      <workItem from="1693528240102" duration="35510000" />
     </task>
     <task id="LOCAL-00001" summary="Styling css">
       <option name="closed" value="true" />
@@ -216,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693546263632</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="When mouse leaves the canvas its now releases the inflated objects to shrink back">
+      <option name="closed" value="true" />
+      <created>1693548098341</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1693548098341</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +261,7 @@
     <MESSAGE value="Touch Input Refinement test3" />
     <MESSAGE value="Engine Stress Test" />
     <MESSAGE value="Organic Re-organising fx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Organic Re-organising fx" />
+    <MESSAGE value="When mouse leaves the canvas its now releases the inflated objects to shrink back" />
+    <option name="LAST_COMMIT_MESSAGE" value="When mouse leaves the canvas its now releases the inflated objects to shrink back" />
   </component>
 </project>
