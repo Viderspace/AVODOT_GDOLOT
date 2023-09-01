@@ -120,6 +120,13 @@ function searchTouches() {
     if (mousepos === null) return;
     if (letters === null) letters = lettersManager.GetLetters();
 
+    if (mousepos.x === 0 && mousepos.y === 0) {
+        letters.forEach(letterObj => {
+                setStraightAngle(letterObj.body);
+                letterObj.isTouched(false)
+        });
+    }
+
     let currentlyTouched = scanUserTouches();
 
     letters.forEach(letterObj => {
