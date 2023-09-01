@@ -25,7 +25,7 @@ var render1 = Render.create({
         height: container1.clientHeight +200,
         background: "transparent",
         wireframes: showWireframes,
-        showAngleIndicator: true
+        showAngleIndicator: false
     }
 });
 
@@ -37,16 +37,16 @@ var render1 = Render.create({
 let prevMousePos= Vector.create(0, 0);
 
 let mousepos = Vector.create(0, 0);
-let debugCursor = Bodies.circle(0, 0, 10, {
-    isStatic: true,
-    isSensor: true,
-    render: {
-        fillStyle: "red",
-        strokeStyle: "black"
-    }
-})
-Composite.add(engine.world, debugCursor);
-
+// let debugCursor = Bodies.circle(0, 0, 10, {
+//     isStatic: true,
+//     isSensor: true,
+//     render: {
+//         fillStyle: "red",
+//         strokeStyle: "black"
+//     }
+// })
+// Composite.add(engine.world, debugCursor);
+//
 
 container1.addEventListener("touchmove", (e) => {
     var rect = e.target.getBoundingClientRect();
@@ -55,7 +55,7 @@ container1.addEventListener("touchmove", (e) => {
 
      prevMousePos = mousepos;
     mousepos =Vector.create(x, y);
-    debugCursor.position = mousepos;
+    // debugCursor.position = mousepos;
 });
 
 //

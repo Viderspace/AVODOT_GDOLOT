@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Allowed scrolling all over canvas test 3">
+    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Allowed scrolling all over canvas test 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/Letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/Letter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS_Scripts/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/mainScript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +95,7 @@
       <workItem from="1692558159127" duration="96902000" />
       <workItem from="1693237054729" duration="7550000" />
       <workItem from="1693350756169" duration="5053000" />
-      <workItem from="1693528240102" duration="38146000" />
+      <workItem from="1693528240102" duration="38448000" />
     </task>
     <task id="LOCAL-00001" summary="Styling css">
       <option name="closed" value="true" />
@@ -248,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693598227626</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Allowed scrolling all over canvas test 4">
+      <option name="closed" value="true" />
+      <created>1693598973354</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1693598973354</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +293,7 @@
     <MESSAGE value="Allowed scrolling all over canvas test" />
     <MESSAGE value="Allowed scrolling all over canvas test 2" />
     <MESSAGE value="Allowed scrolling all over canvas test 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Allowed scrolling all over canvas test 3" />
+    <MESSAGE value="Allowed scrolling all over canvas test 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allowed scrolling all over canvas test 4" />
   </component>
 </project>

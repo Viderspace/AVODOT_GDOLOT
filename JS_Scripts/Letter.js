@@ -144,7 +144,7 @@ class Letter {
     }
 
     static inflationDuration = 50;
-    static inflationRate = 20;
+    static inflationRate = 15;
 
     static deflationDuration = 15
     static deflationRate = 1
