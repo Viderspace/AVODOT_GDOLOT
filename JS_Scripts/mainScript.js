@@ -34,6 +34,8 @@ var render1 = Render.create({
 // Matter.Mouse.clearSourceEvents(mouse);
 
 
+let prevMousePos= Vector.create(0, 0);
+
 let mousepos = Vector.create(0, 0);
 let debugCursor = Bodies.circle(0, 0, 10, {
     isStatic: true,
@@ -46,16 +48,23 @@ let debugCursor = Bodies.circle(0, 0, 10, {
 Composite.add(engine.world, debugCursor);
 
 
-let prevMousePos = null
 container1.addEventListener("touchmove", (e) => {
     var rect = e.target.getBoundingClientRect();
-    var x = e.targetTouches[0].pageX - rect.left;
-    var y = e.targetTouches[0].pageY - rect.top;
+    var x = e.targetTouches[0].clientX - rect.left;
+    var y = e.targetTouches[0].clientY - rect.top;
 
      prevMousePos = mousepos;
     mousepos =Vector.create(x, y);
     debugCursor.position = mousepos;
 });
+
+//
+// let scrollOffset = 0;
+// container1.addEventListener("touchstart", (e) => {
+//     scrollOffset = 0
+// });
+
+
 // document.addEventListener('mousemove', () => {
 //     const query = Query.point(bodies, mouse.position)
 //     console.log(mouse.position);
@@ -215,6 +224,8 @@ function checkMouseIdle(prev, curr){
 
     if (idleTimer > 50){
         console.log("Idle timer reached");
+        mousepos = Vector.create(0, 0);
+
         letters.forEach(letterObj => {
             letterObj.isTouched(false)
         });
