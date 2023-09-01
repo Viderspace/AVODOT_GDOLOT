@@ -4,9 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="shorter page test">
+    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Static letters testing">
+      <change afterPath="$PROJECT_DIR$/JS_Scripts/KolKoreCanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS_Scripts/Letter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ב.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ב.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ג.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ג.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ד1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ד1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ד2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ד2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ו4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ל.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ל.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ע.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ע.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ת1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ת1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ת2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/עבודות_גדולות_אותיות/ת2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_א.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_א.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ו1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ו1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ו2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ו2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ל.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ל.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ק1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ק1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ק2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ק2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ר.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/קול_קורא_אותיות/שחור_ר.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/ResponsiveVector.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/JS_Scripts/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/mainScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Letter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,16 +51,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Viderspace&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="659ffc30-4d2e-4c7d-b9db-8914b695aa18" />
+        <option name="url" value="https://github.com/Viderspace/AVODOT_GDOLOT.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2UcRo6KzoxcrUXUH8M0ar1QA3bM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -64,9 +103,9 @@
       <recent name="$PROJECT_DIR$/Assets/Fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/JS_Scripts" />
       <recent name="$PROJECT_DIR$/Assets" />
       <recent name="$PROJECT_DIR$/Assets/Fonts" />
-      <recent name="$PROJECT_DIR$/JS_Scripts" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -78,7 +117,9 @@
       <option name="presentableId" value="Default" />
       <updated>1692558158093</updated>
       <workItem from="1692558159127" duration="96902000" />
-      <workItem from="1693237054729" duration="2659000" />
+      <workItem from="1693237054729" duration="7550000" />
+      <workItem from="1693350756169" duration="5053000" />
+      <workItem from="1693528240102" duration="12916000" />
     </task>
     <task id="LOCAL-00001" summary="Styling css">
       <option name="closed" value="true" />
@@ -144,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692746923871</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Static letters testing">
+      <option name="closed" value="true" />
+      <created>1693239910971</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1693239910971</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,17 +218,7 @@
     <MESSAGE value="Design improvements" />
     <MESSAGE value="Inflation and collision mechanics" />
     <MESSAGE value="shorter page test" />
-    <option name="LAST_COMMIT_MESSAGE" value="shorter page test" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/JS_Scripts/mainScript.js</url>
-          <line>110</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Static letters testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Static letters testing" />
   </component>
 </project>
