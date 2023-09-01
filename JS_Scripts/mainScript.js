@@ -101,6 +101,12 @@ Matter.Events.on(mouseConstraint, "touchend", function (event) {
     }
 );
 
+// add event listener
+container1.addEventListener("mouseleave", () => {
+    // fire mouseup event to let go of the dragged item
+    mouseConstraint.mouse.mouseup(event);
+});
+
 
 
 
