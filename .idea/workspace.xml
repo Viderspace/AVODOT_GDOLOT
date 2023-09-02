@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Testing CSS 3">
+    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="NEW SVG">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/Letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/Letter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +95,7 @@
       <workItem from="1692558159127" duration="96902000" />
       <workItem from="1693237054729" duration="7550000" />
       <workItem from="1693350756169" duration="5053000" />
-      <workItem from="1693528240102" duration="74791000" />
+      <workItem from="1693528240102" duration="75856000" />
     </task>
     <task id="LOCAL-00001" summary="Styling css">
       <option name="closed" value="true" />
@@ -336,7 +337,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693678759141</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Testing CSS Avoid selection">
+      <option name="closed" value="true" />
+      <created>1693678927311</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1693678927311</updated>
+    </task>
+    <task id="LOCAL-00032" summary="NEW SVG">
+      <option name="closed" value="true" />
+      <created>1693679067939</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1693679067939</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,8 +371,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Design improvements" />
-    <MESSAGE value="Inflation and collision mechanics" />
     <MESSAGE value="shorter page test" />
     <MESSAGE value="Static letters testing" />
     <MESSAGE value="New Inflating/Deflating Physics" />
@@ -379,6 +394,8 @@
     <MESSAGE value="Testing CSS" />
     <MESSAGE value="Testing CSS2" />
     <MESSAGE value="Testing CSS 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing CSS 3" />
+    <MESSAGE value="Testing CSS Avoid selection" />
+    <MESSAGE value="NEW SVG" />
+    <option name="LAST_COMMIT_MESSAGE" value="NEW SVG" />
   </component>
 </project>

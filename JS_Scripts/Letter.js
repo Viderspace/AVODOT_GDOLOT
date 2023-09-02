@@ -95,7 +95,7 @@ class Letter {
             let imageDims = Vector.create(this.width, this.height);
             imageDims.x *= scale;
             imageDims.y *= scale;
-            offset.x -= this.spaceFromRight;
+            offset.x -= this.spaceFromRight /(1.2/1.3);
             this.body = Bodies.rectangle(offset.x, offset.y + this.yOffset, imageDims.x * colliderShrinkFactor, imageDims.y * colliderShrinkFactor, {
                 render: {
                     sprite: {
