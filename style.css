@@ -15,10 +15,13 @@
     --header-height: 70px;
 }
 
+
+
 header {
     background-color: var(--bg-green);
-    position: absolute;
     height: var(--header-height);
+    top: 0;
+    left: 0;
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -26,6 +29,27 @@ header {
     display: flex;
     justify-content: space-around; /* Distributes items evenly: first item is flush with the start, last item is flush with the end */
     align-items: center; /* Align items vertically in the center */
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0;
+}
+
+form {
+
+    /*justify-content : space-evenly;*/
+    /*justify-items: stretch;*/
+    /*align-items: center;*/
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+    z-index: 1;
 }
 
 .header-logo {
@@ -38,16 +62,7 @@ header {
     width: auto;
 }
 
-form, footer {
-    display: block;
-    background-color: transparent;
-    bottom: 0;
-    position: absolute;
-    margin: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-}
+
 
 .Text, .FormSend, .FormText {
     position: relative;
@@ -87,39 +102,33 @@ form, footer {
 
 
 html, body {
+    position: relative;
+
     background-color: var(--bg-green);
-    /*background-color: transparent;*/
-    margin: 0;
+    margin: auto;
     padding: 0;
-    height: 220vh;
+    height: 100%;
     width: 100%;
-    /*border: 0 transparent;*/
-    /*border-width: 3px;*/
-    /*border : solid darkblue;*/
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
     overscroll-behavior-y: none;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 body {
     background-color: var(--bg-green);
-    position: relative;
 
 }
 
 .content {
-    /*position: relative;*/
-    margin: 0 0 0 0;
-    display: flex;
+    /*display: flex;*/
     justify-content : center;
     align-items: center;
     background-color: #31b44a;
 
     /*top: 100px;*/
-    padding-top: 100px;
-    bottom: auto;
-    height: 100vh;
+    /*bottom: auto;*/
+    height: 1000px;
     width: 100%;
     max-width: 100%;
 
@@ -133,29 +142,30 @@ body {
 }
 
 .info-div {
-    margin-top: 0;
-    margin-bottom: 80px;
+    position: page;
+    bottom : 500px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     justify-content : center;
     align-items: center;
 
-
-
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0;
 }
 
 .info-img {
-    position: relative;
     width: 95%;
     max-width: 100%;
     max-height: 100%;
     height: auto;
 }
 
-.spacer {
-    height: 14vh;
-    background-color: white;
-    margin: 0;
-}
 
 .ptichat-shana{
     max-width: 100%;
@@ -201,7 +211,28 @@ select:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
     font-size: inherit;
     border: 0 transparent;
+}
 
+/* Hide desktop content by default */
+#desktop-content {
+    display: none;
+    justify-content : center;
+    align-content: center;
+}
+#mobile-content{
+    margin: 0;
+
+}
+
+/* Show desktop content and hide mobile content when screen width is more than 480px */
+@media screen and (min-width: 481px) {
+    #desktop-content {
+        display: flex;
+        padding-top: 30vh;
+    }
+    #mobile-content {
+        display: none;
+    }
 }
 
 
