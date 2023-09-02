@@ -9,68 +9,76 @@
 </head>
 
 <body>
+<section id="mobile-content">
+    <header>
+        <img src="Assets/BetBerl_logo.png" alt="BetBerl_Logo" class="header-logo">
+        <img src="Assets/Hamidrashs_logo.png" alt="Hamidrasha_Logo" class="header-logo">
+    </header>
 
-<header>
-    <img src="Assets/BetBerl_logo.png" alt="BetBerl_Logo" class="header-logo">
-    <img src="Assets/Hamidrashs_logo.png" alt="Hamidrasha_Logo" class="header-logo">
-</header>
 
-<div class="content" id='canvas1'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.js"></script>
-    <script type=text/javascript src="JS_Scripts/Letter.js"></script>
-    <script type=text/javascript src="JS_Scripts/LettersManager.js"></script>
-    <script type=text/javascript src="JS_Scripts/mainScript.js"></script>
+    <div class="content" id='canvas1'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.js"></script>
+        <script type=text/javascript src="JS_Scripts/Letter.js"></script>
+        <script type=text/javascript src="JS_Scripts/LettersManager.js"></script>
+        <script type=text/javascript src="JS_Scripts/mainScript.js"></script>
+    </div>
+    <div class="ptichat-shana">
+        <img src="Assets/SVGs/תערוכת_פתיחת_שנה.svg" alt="vec" class="info-img">
+    </div>
+
+    <!--<div class="noga-adam">-->
+    <!--    <img src="Assets/SVGs/אוצרים_נגה_אדם.svg" alt="SVG" class="info-img">-->
+    <!--</div>-->
+
+
+    <div class="info-div">
+        <img src="Assets/SVGs/lower_Info_chad.svg" alt="SVG2" class="info-img">
+    </div>
+
+
+    <footer id='bottom'>
+        <form
+                method="POST"
+                action="https://script.google.com/macros/s/AKfycbxtqC2B8SBCjzdex10KgHUf_sy_jjqmgu7I5bSQdi0MGktZ3EgVXN3p6OJDqsTADwPhUQ/exec"
+                id='contact-form'>
+            <div>
+                <input class="FormText" name="Name" id="name" type="text"
+                       placeholder=
+                               "שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מל"
+                       required>
+            </div>
+            <div>
+                <input class="FormText" name="Phone" id="phone" type="tel"
+                       placeholder="מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  "
+                       required>
+            </div>
+            <div>
+                <input class="FormText" name="Email" id="email" type="email"
+                       placeholder="מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  "
+                       required>
+            </div>
+            <div>
+                <input class="FormText" name="Description" id="Description" type="text"
+                       placeholder="תציגו  את  העבודה  הגדולה  שלכם  בקטנה  תציגו  את  העבודה  הגדולה  שלכם  בקטנה  תציגו  את  העבודה  הגדולה  שלכם  בקטנה  תציגו  את  העבודה  הגדולה  שלכם  בקטנה"
+                       required>
+            </div>
+
+
+            <div>
+                <button class="FormText" type="submit">שליחה</button>
+            </div>
+
+        </form>
+        <script type=text/javascript src="JS_Scripts/GoogleSheetHandler.js"></script>
+    </footer>
+
+</section>
+
+<div id="desktop-content">
+    <img src="Assets/mobile_only.svg" alt="vec" class="info-img">
+
+
 </div>
-<div class="ptichat-shana">
-    <img src="Assets/SVGs/תערוכת_פתיחת_שנה.svg" alt="vec" class="info-img">
-</div>
-
-<!--<div class="noga-adam">-->
-<!--    <img src="Assets/SVGs/אוצרים_נגה_אדם.svg" alt="SVG" class="info-img">-->
-<!--</div>-->
-
-
-<div class="info-div">
-    <img src="Assets/SVGs/lower_Info_chad.svg" alt="SVG2" class="info-img">
-</div>
-
-
-<footer id='bottom'>
-    <form
-            method="POST"
-            action="https://script.google.com/macros/s/AKfycbxtqC2B8SBCjzdex10KgHUf_sy_jjqmgu7I5bSQdi0MGktZ3EgVXN3p6OJDqsTADwPhUQ/exec"
-            id='contact-form'>
-    <div>
-        <input class="FormText" name="Name" id="name" type="text"
-               placeholder=
-                       "שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מלא  שם  מל"
-               required>
-    </div>
-    <div>
-        <input class="FormText" name="Phone" id="phone" type="tel"
-               placeholder="מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  מספר  טלפון  "
-               required>
-    </div>
-    <div>
-        <input class="FormText" name="Email" id="email" type="email"
-               placeholder="מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  מייל  כתובת  "
-               required>
-    </div>
-        <div>
-            <input class="FormText" name="Description" id="Description" type="text"
-                   placeholder="תציגו  את  העבודה  הגדולה  שלכם  בקטנה  תציגו  את  העבודה  הגדולה  שלכם  בקטנה  תציגו  את  העבודה  הגדולה  שלכם  בקטנה  תציגו  את  העבודה  הגדולה  שלכם  בקטנה"
-                   required>
-        </div>
-
-
-    <div>
-        <button class="FormSend" type="submit">שליחה</button>
-    </div>
-    <!--        <label class="textBlack" for="email">Email:</label>-->
-
-    </form>
-    <script type=text/javascript src="JS_Scripts/GoogleSheetHandler.js"></script>
-</footer>
 
 
 </body>
