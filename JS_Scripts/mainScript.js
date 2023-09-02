@@ -169,7 +169,7 @@ window.addEventListener("resize", () => handleResize(container1));
 
 
 
-let lettersManager = new LettersManager(LettersManager.LINES1AND2);
+let lettersManager = new LettersManager();
 let letters = lettersManager.GetLetters();
 let bodies = lettersManager.GetBodies();
 
@@ -203,7 +203,7 @@ function searchTouches() {
 let searchTouch = setInterval(searchTouches, 50);
 let DeltaTime = 0;
 
-Matter.Events.on(runner, "afterTick", function (event) {
+Matter.Events.on(runner, "afterTick", function () {
     DeltaTime  = (engine.timing.delta || (1000 / 60)) / 1000;
 
 

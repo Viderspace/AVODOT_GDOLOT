@@ -183,7 +183,7 @@ var colliderShrinkFactor = 0.15;
 
      }
 
-    constructor(id) {
+    constructor() {
          this.spawnLines1And2();
         this.spawnLines3And4();
          // if (id ===LettersManager.LINES1AND2) this.spawnLines1And2();

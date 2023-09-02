@@ -4,37 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Layout completions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 10.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 11.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 12.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 13.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 14.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 15.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 16.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 17.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 18.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 19.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 20.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 21.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 22.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 23.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 24.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 25.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 26.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 6.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 7.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 8.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset 9.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SVGs/Asset2.svg" beforeDir="false" />
+    <list default="true" id="874bdb5c-e9ae-4dd2-876b-ac3a8bfa36f5" name="Changes" comment="Layout completions &amp; cleanups">
       <change beforePath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/LettersManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS_Scripts/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS_Scripts/mainScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +95,7 @@
       <workItem from="1692558159127" duration="96902000" />
       <workItem from="1693237054729" duration="7550000" />
       <workItem from="1693350756169" duration="5053000" />
-      <workItem from="1693528240102" duration="66203000" />
+      <workItem from="1693528240102" duration="66370000" />
     </task>
     <task id="LOCAL-00001" summary="Styling css">
       <option name="closed" value="true" />
@@ -300,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693664489704</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Layout completions &amp; cleanups">
+      <option name="closed" value="true" />
+      <created>1693666089349</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1693666089349</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +320,7 @@
     <MESSAGE value="Allowed scrolling all over canvas test 4" />
     <MESSAGE value="Allowed scrolling all over canvas test 5" />
     <MESSAGE value="Layout completions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Layout completions" />
+    <MESSAGE value="Layout completions &amp; cleanups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout completions &amp; cleanups" />
   </component>
 </project>
