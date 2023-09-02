@@ -91,7 +91,7 @@ html, body {
     /*background-color: transparent;*/
     margin: 0;
     padding: 0;
-    height: 220vh;
+    height: 195vh;
     width: 100%;
     /*border: 0 transparent;*/
     /*border-width: 3px;*/
@@ -123,23 +123,14 @@ body {
 }
 
 .info-div {
-    display: inline-block;
     padding-right: 20px;
     padding-left: 20px;
-    padding-top: 50px;
-
-    width: auto;
-    height: 70vh;
-    /*background: "url(<path-to-image>), lightgray 50% / cover no-repeat",*/
 }
 
 .info-img {
-    margin-right: 20px;
     max-width: 100%;
     max-height: 100%;
-    /*position: relative;*/
-    /*height: inherit;*/
-    /*width: auto;*/
+
 
 }
 
@@ -147,6 +138,20 @@ body {
     height: 14vh;
     background-color: white;
     margin: 0;
+}
+
+.ptichat-shana{
+    max-width: 100%;
+    top: 475px;
+    left: 250px;
+    position: absolute;
+}
+
+.noga-adam{
+    max-width: 100%;
+    top: 835px;
+    left: 85px;
+    position: absolute;
 }
 
 /*section {*/

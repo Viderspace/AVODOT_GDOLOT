@@ -44,16 +44,16 @@ function switchWireframes() {
 let prevMousePos= Vector.create(0, 0);
 
 let mousepos = Vector.create(0, 0);
-let debugCursor = Bodies.circle(0, 0, 10, {
-    isStatic: true,
-    isSensor: true,
-    render: {
-        fillStyle: "red",
-        strokeStyle: "black"
-    }
-})
-Composite.add(engine.world, debugCursor);
-
+// let debugCursor = Bodies.circle(0, 0, 10, {
+//     isStatic: true,
+//     isSensor: true,
+//     render: {
+//         fillStyle: "red",
+//         strokeStyle: "black"
+//     }
+// })
+// Composite.add(engine.world, debugCursor);
+//
 
 container1.addEventListener("touchmove", (e) => {
     var rect = e.target.getBoundingClientRect();

@@ -148,7 +148,7 @@ var colliderShrinkFactor = 0.15;
              new Letter(442, 1420, "Assets/עבודות_גדולות_אותיות/ו4.png", 155,0,true), // const ו4 = { width: 442, height: 1420 };
              new Letter(482, 490, "Assets/עבודות_גדולות_אותיות/נק-ירוק2.png", 0, -190, false), // const נק-ירוק2 = { width: 482, height: 490 };
              new Letter(1235, 1438, "Assets/עבודות_גדולות_אותיות/ת2.png", 155,0,true), // const ת2 = { width: 1235, height: 1438 };
-             new Letter(1403, 66, "Assets/קול_קורא_אותיות/פתיחת_שנה_טקסט.png", -600, 300, false), // const פתיחת_שנה_טקסט = { width: 1403, height: 66 };
+             // new Letter(1403, 66, "Assets/קול_קורא_אותיות/פתיחת_שנה_טקסט.png", -600, 300, false), // const פתיחת_שנה_טקסט = { width: 1403, height: 66 };
          ];
 
          this.AddLine(this.line1);
@@ -175,7 +175,7 @@ var colliderShrinkFactor = 0.15;
              new Letter(447, 436, "Assets/קול_קורא_אותיות/נק_אדום.png", 0, -260, false), // const נק_אדום = { width: 447, height: 436 };
              new Letter(1053, 1462, "Assets/קול_קורא_אותיות/שחור_ר.png", 160, -60, true), // const שחור_ר = { width: 1053, height: 1462 };
              new Letter(1350, 1453, "Assets/קול_קורא_אותיות/שחור_א.png", 230, -60, true), // const שחור_א = { width: 1350, height: 1453 };
-             new Letter(447, 436, "Assets/קול_קורא_אותיות/אוצרים_אדם_נגה_טקסט.png", -130, 40, false), // const נק_אדום = { width: 447, height: 436 };
+             // new Letter(447, 436, "Assets/קול_קורא_אותיות/אוצרים_אדם_נגה_טקסט.png", -130, 40, false), // const נק_אדום = { width: 447, height: 436 };
          ];
 
          this.AddLine(this.line3);
