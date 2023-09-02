@@ -19,7 +19,7 @@ function ResponsiveSize(client, mobile, small, medium, large) {
 }
 
 
-let firstLineY = 150;
+let firstLineY = 180;
 let firstLineOffset = ResponsiveSize(container.clientWidth,
     Vector.create(container.clientWidth - 20, firstLineY),
     Vector.create(container.clientWidth - 50, container.clientHeight / 3),

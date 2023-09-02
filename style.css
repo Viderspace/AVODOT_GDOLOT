@@ -12,7 +12,7 @@
 :root {
     --text-red: #EE3B23;
     --bg-green: #31b44a;
-    --header-height: 90px;
+    --header-height: 70px;
 }
 
 header {
@@ -91,7 +91,7 @@ html, body {
     /*background-color: transparent;*/
     margin: 0;
     padding: 0;
-    height: 195vh;
+    height: 220vh;
     width: 100%;
     /*border: 0 transparent;*/
     /*border-width: 3px;*/
@@ -123,15 +123,18 @@ body {
 }
 
 .info-div {
-    padding-right: 20px;
-    padding-left: 20px;
+    margin-top: 100px;
+    display: flex;
+    justify-content : center;
+    align-items: center;
 }
 
 .info-img {
+    position: relative;
+    width: 95%;
     max-width: 100%;
     max-height: 100%;
-
-
+    height: auto;
 }
 
 .spacer {
@@ -142,14 +145,14 @@ body {
 
 .ptichat-shana{
     max-width: 100%;
-    top: 475px;
+    top: 500px;
     left: 250px;
     position: absolute;
 }
 
 .noga-adam{
     max-width: 100%;
-    top: 835px;
+    top: 865px;
     left: 85px;
     position: absolute;
 }

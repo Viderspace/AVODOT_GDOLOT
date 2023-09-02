@@ -190,7 +190,7 @@ class Letter {
     }
 
     static CoolDownTime = 0.5;
-    static inflationDuration = 0.5;
+    static inflationDuration = 0.4;
     static inflationRate = 3;
 
     static deflationDuration = 15
@@ -220,7 +220,7 @@ class Letter {
 
 
         let ratio =  this.timer / Letter.inflationDuration;
-        var newScale = 1 + DeltaTime * easeOut(ratio) *Letter.MaxScaleFactor;
+        var newScale = 1 + DeltaTime * ratio *Letter.MaxScaleFactor;
         Body.scale(this.body, newScale, newScale);
         this.scaleSprite();
     }

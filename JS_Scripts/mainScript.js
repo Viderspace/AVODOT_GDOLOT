@@ -21,7 +21,7 @@ var render1 = Render.create({
     element: container1,
     engine: engine,
     options: {
-        width: container1.clientWidth,
+        width: container1.clientWidth +200,
         height: container1.clientHeight,
         background: "transparent",
         wireframes: showWireframes,
