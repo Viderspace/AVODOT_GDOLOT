@@ -110,6 +110,9 @@ body {
 
 .content {
     position: relative;
+    display: flex;
+    justify-content : center;
+    align-items: center;
     background-color: #31b44a;
 
     /*top: 100px;*/
@@ -117,6 +120,7 @@ body {
     bottom: auto;
     height: 100vh;
     width: 100%;
+    max-width: 100%;
 
     /*border:  10px black solid ;*/
 
