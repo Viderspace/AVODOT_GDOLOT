@@ -25,11 +25,34 @@ var Bodies = Matter.Bodies,
 //     Vector.create(container.clientWidth - 50, 500)
 // );
 
+function customCurve(x) {
+    // x = Math.max(0, Math.min(1, x));
+    if (x<0.75) return 2;
+    return -1;
+
+
+}
+
+function smoothstep(min, max, value) {
+    var x = Math.max(0, Math.min(1, (value - min) / (max - min)));
+    return x * x * (3 - 2 * x);
+};
+
+function elasticRise(t) {
+    let x = Math.sin(-13 * (t - 1) * Math.PI / 2) * Math.pow(2, -10 * t)+1 ;
+    console.log("elastic function -- t is " + t + " result is " + x);
+    return x;
+}
+
+function easeOut(x) {
+    return 1 - Math.pow(1 - x, 10);
+}
 
 class Letter {
     static members = [];
 
-    constructor(width, height, path, spaceFromRight = 0, yOffset = 0, canCollide = true) {
+    constructor(width, height, path, spaceFromRight, yOffset, canCollide) {
+        this.canCollide = canCollide ? 1 : 0;;
         this.spaceFromRight = spaceFromRight * ResponsiveScale;
         this.yOffset = yOffset * ResponsiveScale;
         this.width = width;
@@ -37,20 +60,26 @@ class Letter {
         this.path = path;
         this.makeBody(LettersManager.LineOffset)
         this.currentScale = scale;
+        this.cooldown = 0;
         this.leash = null;
-        this.canCollide = canCollide;
-        this.isPointed = false;
         this.timer = 0;
         this.animation = Letter.NONE;
         this.position = Vector.create(this.body.position.x, this.body.position.y);
         this.initSize = Math.sqrt(this.body.area) / this.width * this.height;
         this.initSpriteScale = this.body.render.sprite.yScale;
+        this.currSpriteScale = this.initSpriteScale;
 
         Letter.members.push(this);
 
+        // console.log("t=0, elasticRise(t) = " + elasticRise(0));
+        // console.log("t=0.25, elasticRise(t) = " + elasticRise(0.25));
+        // console.log("t=0.5, elasticRise(t) = " + elasticRise(0.5));
+        // console.log("t=0.75, elasticRise(t) = " + elasticRise(0.75));
+        // console.log("t=1, elasticRise(t) = " + elasticRise(1));
+
     }
 
-    addDot(dotBody){
+    addDot(dotBody) {
         // console.log("Adding dot to " + this.path)
         // var body = this.body;
         // this.body = Body.create({
@@ -61,7 +90,7 @@ class Letter {
 
 
     makeBody(offset) {
-        console.log("making letter " + this.path);
+        // console.log("making letter " + this.path);
         try {
             let imageDims = Vector.create(this.width, this.height);
             imageDims.x *= scale;
@@ -75,13 +104,14 @@ class Letter {
                         yScale: scale
                     }
                 },
+
                 isStatic: lettersAreStatic,
-                isSensor: this.canCollide(),
-                collisionFilter: {
-                    category: (this.canCollide ? 0x0001 : 0x0010),
-                }
+                isSensor: !this.CanCollide(),
+                // collisionFilter: {
+                //     mask: (this.canCollide() ? 0b0001 : 0b0010),
+                // }
             });
-           this.putOnLeash({x: offset.x, y: offset.y + this.yOffset});
+            this.putOnLeash({x: offset.x, y: offset.y + this.yOffset});
             Composite.add(engine.world, this.body);
 
 
@@ -98,7 +128,7 @@ class Letter {
             bodyB: this.body,
             // length: 2.5,
             stiffness: 0.001,
-            damping: 0.5,
+            damping: 1,
             render: {
                 visible: showConstraints
             }
@@ -107,8 +137,10 @@ class Letter {
         Composite.add(engine.world, this.leash);
     }
 
-    canCollide(){return this.yOffset <-190*ResponsiveScale;}
-
+    CanCollide() {
+        console.log("path is " + this.path + " can collide is " + this.canCollide )
+        return this.canCollide > 0;
+    }
 
 
     isTouched(isTouched) {
@@ -116,35 +148,50 @@ class Letter {
     }
 
 
+
     update() {
-        if (!this.canCollide)return;
+        if (!this.canCollide) return;
+
         if (this.currentlyTouched) {
+            // console.log("updating letter " + this.path)
             this.lastBeenTouched = 0;
+            if (this.currSpriteScale >= Letter.MaxScaleFactor * this.initSpriteScale) {
+                // No more Scaling up
+                return;
+            }
             this.animation = Letter.UP;
             this.inflate();
-        } else {
-            this.lastBeenTouched++;
-            if (this.lastBeenTouched > Letter.inflationDuration) {
-                this.animation = Letter.DOWN;
-                this.deflate();
-            }
+            return;
         }
-        if (this.lastBeenTouched> 50){
+        this.lastBeenTouched += DeltaTime;
+        if (this.lastBeenTouched > Letter.CoolDownTime) {
+            this.animation = Letter.DOWN;
+            this.deflate();
+        }
+
+        if (this.animation !== Letter.UP) {
             this.rotateBack()
         }
     }
 
-    rotateBack(){
+    rotateBack() {
         let angle = this.body.angle;
-        if (Math.abs(angle) >1){
-            angle =angle + angle < 0 ? 1:-1;
-            Matter.Body.setAngle(this.body, angle);
+        let t = 0.5;
+        // console.log(this.path + " angle is " + angle);
 
+        if (angle < 0) {
+            angle = smoothstep(0, angle, t)
+        } else if (angle > 0) {
+            angle = smoothstep(angle, 0, t)
         }
+        Matter.Body.setAngle(this.body, angle);
+
+
     }
 
-    static inflationDuration = 50;
-    static inflationRate = 15;
+    static CoolDownTime = 0.5;
+    static inflationDuration = 0.5;
+    static inflationRate = 3;
 
     static deflationDuration = 15
     static deflationRate = 1
@@ -153,47 +200,53 @@ class Letter {
     static UP = 1;
     static  DOWN = -1;
     static NONE = 0;
-    static MaxSize = 0.2
+    static MaxSize = 0.2;
+
+    static MaxScaleFactor = 3;
+
 
     inflate() {
-        // if (this.currSpriteScale > Letter.MaxSize) return;
-        if (this.animation !== Letter.UP  ) return;
-        this.currentlyTouched = false
-        if (this.currSpriteScale > Letter.MaxSize) {
+        if (this.animation !== Letter.UP) return;
+        this.timer += DeltaTime;
+
+        if (this.timer > Letter.inflationDuration) { // End of inflation
+            this.currentlyTouched = false
             this.animation = Letter.NONE;
             this.timer = 0;
+            this.cooldown = Letter.CoolDownTime;
             return;
         }
 
-        this.timer ++;
-        var timeScale = (engine.timing.delta || (1000 / 60)) / 1000;
-        var newScale = 1 + (Letter.inflationRate * timeScale);
+
+
+        let ratio =  this.timer / Letter.inflationDuration;
+        var newScale = 1 + DeltaTime * easeOut(ratio) *Letter.MaxScaleFactor;
         Body.scale(this.body, newScale, newScale);
         this.scaleSprite();
-
-
     }
+
 
     deflate() {
         if (this.animation !== Letter.DOWN) return;
-        Matter.Body.setAngle(this.body, 0);
+        // Matter.Body.setAngle(this.body, 0);
 
         if (this.currSize < this.initSize) {
             this.animation = Letter.NONE;
             this.timer = 0;
             return;
         }
-
-        var timeScale = (engine.timing.delta || (1000 / 60)) / 1000;
-        var newScale = 1 - (Letter.deflationRate * timeScale);
+        var newScale = 1 - (Letter.deflationRate * DeltaTime);
         Body.scale(this.body, newScale, newScale);
         this.scaleSprite();
     }
 
-    scaleSprite(){
-        this.currSize = Math.sqrt(this.body.area) / this.width * this.height;
+    scaleSprite() {
+        // console.log("body area "+ this.body.area + " w*h:" + this.width * this.height);
 
-        let spriteNewScale = (this.currSize/ this.initSize) * this.initSpriteScale;
+        this.currSize = Math.sqrt(this.body.area) / this.width * this.height;
+        // console.log("this.body.area is " + this.body.scale )
+        // console.log("sprite current scale is "+ this.currSpriteScale + " init:" + this.initSpriteScale);
+        let spriteNewScale = (this.currSize / this.initSize) * this.initSpriteScale;
         this.currSpriteScale = spriteNewScale;
         // let spriteNewScale = (this.currSize/ this.initSize) * scale
 

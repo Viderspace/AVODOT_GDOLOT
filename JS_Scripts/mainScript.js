@@ -22,12 +22,19 @@ var render1 = Render.create({
     engine: engine,
     options: {
         width: container1.clientWidth,
-        height: container1.clientHeight +200,
+        height: container1.clientHeight,
         background: "transparent",
         wireframes: showWireframes,
         showAngleIndicator: false
     }
 });
+
+function switchWireframes() {
+    render1.options.wireframes = !render1.options.wireframes;
+}
+
+// Epilepsy warning
+// setInterval(switchWireframes, 1000);
 
 
 // let mouse = Matter.Mouse.create(render1.canvas);
@@ -37,16 +44,16 @@ var render1 = Render.create({
 let prevMousePos= Vector.create(0, 0);
 
 let mousepos = Vector.create(0, 0);
-// let debugCursor = Bodies.circle(0, 0, 10, {
-//     isStatic: true,
-//     isSensor: true,
-//     render: {
-//         fillStyle: "red",
-//         strokeStyle: "black"
-//     }
-// })
-// Composite.add(engine.world, debugCursor);
-//
+let debugCursor = Bodies.circle(0, 0, 10, {
+    isStatic: true,
+    isSensor: true,
+    render: {
+        fillStyle: "red",
+        strokeStyle: "black"
+    }
+})
+Composite.add(engine.world, debugCursor);
+
 
 container1.addEventListener("touchmove", (e) => {
     var rect = e.target.getBoundingClientRect();
@@ -55,7 +62,7 @@ container1.addEventListener("touchmove", (e) => {
 
      prevMousePos = mousepos;
     mousepos =Vector.create(x, y);
-    // debugCursor.position = mousepos;
+    debugCursor.position = mousepos;
 });
 
 //
@@ -172,40 +179,35 @@ function scanUserTouches(){
     return  Matter.Query.point(bodies, mousepos);
 }
 
-function setStraightAngle(body) {
-    // Matter.Body.setAngle(body, 0);
-
-}
-
 function searchTouches() {
 
     if (mousepos === null) return;
     if (letters === null) letters = lettersManager.GetLetters();
-    console.log("mouse position: "+ mousepos.x + " " + mousepos.y)
+    // console.log("mouse position: "+ mousepos.x + " " + mousepos.y)
     checkMouseIdle(prevMousePos, mousepos);
 
-    // if (mousepos.x === 0 && mousepos.y === 0) {
-    //     letters.forEach(letterObj => {
-    //             setStraightAngle(letterObj.body);
-    //             letterObj.isTouched(false)
-    //     });
-    // }
+    if (mousepos.x === 0 && mousepos.y === 0) {
+        letters.forEach(letterObj => {
+                letterObj.isTouched(false)
+        });
+    }
 
     let currentlyTouched = scanUserTouches();
 
     letters.forEach(letterObj => {
-        if (true) { // Replace with "if letterObj is not inflated"
-            setStraightAngle(letterObj.body);
-        }
         var letterIsTouched = currentlyTouched.includes(letterObj.body);
         letterObj.isTouched(letterIsTouched)
     });
 }
 
 let searchTouch = setInterval(searchTouches, 50);
+let DeltaTime = 0;
 
 Matter.Events.on(runner, "afterTick", function (event) {
-        letters.forEach(letterObj => {
+    DeltaTime  = (engine.timing.delta || (1000 / 60)) / 1000;
+
+
+    letters.forEach(letterObj => {
         letterObj.update();
 
     });
@@ -214,7 +216,7 @@ Matter.Events.on(runner, "afterTick", function (event) {
 let idleTimer = 0;
 function checkMouseIdle(prev, curr){
     if (prev === null || curr === null) return;
-    console.log("Idle timer :"+idleTimer )
+    // console.log("Idle timer :"+idleTimer )
 
     if (Math.abs(prev.x -curr.x)<1 && Math.abs(prev.y - curr.y)<1){
         idleTimer++;
@@ -223,7 +225,7 @@ function checkMouseIdle(prev, curr){
     }
 
     if (idleTimer > 50){
-        console.log("Idle timer reached");
+        // console.log("Idle timer reached");
         mousepos = Vector.create(0, 0);
 
         letters.forEach(letterObj => {
