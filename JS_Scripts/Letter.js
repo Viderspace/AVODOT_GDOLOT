@@ -189,12 +189,12 @@ class Letter {
 
     }
 
-    static CoolDownTime = 0.5;
-    static inflationDuration = 0.4;
+    static CoolDownTime = 0.0;
+    static inflationDuration = 0.3;
     static inflationRate = 3;
 
     static deflationDuration = 15
-    static deflationRate = 1
+    static deflationRate = 0.2;
 
 
     static UP = 1;
@@ -220,7 +220,8 @@ class Letter {
 
 
         let ratio =  this.timer / Letter.inflationDuration;
-        var newScale = 1 + DeltaTime * ratio *Letter.MaxScaleFactor;
+        // ratio = Math.cbrt(ratio);
+        var newScale = 1 +  ratio *Letter.MaxScaleFactor;
         Body.scale(this.body, newScale, newScale);
         this.scaleSprite();
     }
@@ -235,7 +236,7 @@ class Letter {
             this.timer = 0;
             return;
         }
-        var newScale = 1 - (Letter.deflationRate * DeltaTime);
+        var newScale = 1 - (Letter.deflationRate * DeltaTime *10);
         Body.scale(this.body, newScale, newScale);
         this.scaleSprite();
     }
