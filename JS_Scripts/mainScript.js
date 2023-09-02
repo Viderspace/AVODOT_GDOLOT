@@ -62,7 +62,7 @@ container1.addEventListener("touchmove", (e) => {
 
      prevMousePos = mousepos;
     mousepos =Vector.create(x, y);
-    debugCursor.position = mousepos;
+    // debugCursor.position = mousepos;
 });
 
 //
