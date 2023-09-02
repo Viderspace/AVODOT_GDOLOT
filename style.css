@@ -109,7 +109,8 @@ body {
 }
 
 .content {
-    position: relative;
+    /*position: relative;*/
+    margin: 0 0 0 0;
     display: flex;
     justify-content : center;
     align-items: center;
@@ -127,10 +128,12 @@ body {
 }
 
 .info-div {
-    margin-top: 100px;
+    margin-top: 0;
+    margin-bottom: 80px;
     display: flex;
     justify-content : center;
     align-items: center;
+
 }
 
 .info-img {
