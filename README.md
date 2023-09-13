@@ -11,8 +11,9 @@ designed by artist Adam Wellingstein.
 - Webpage hosted on **GitHub Pages**.
 - Backend powered by **Google's Apps-Script**.
 
-> Note: This small project was my initial dive into web development, with no prior experience.
-
 Check out the Published page with your mobile device:
 
 ![QR Code](Avodot_QR_Code.png)
+
+> Note: This small project was my initial dive into web development, with no prior experience.
+
