@@ -1,4 +1,4 @@
-# Art School Event Landing Page
+# Avodot Gdolot Event Landing Page
 
 A zero-cost, interactive landing page for Beit-Berl's art school opening event, 
 designed by artist Adam Wellingstein.
