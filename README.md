@@ -15,4 +15,4 @@ designed by artist Adam Wellingstein.
 
 Check out the Published page with your mobile device:
 
-![QR Code](path_to_your_QR_code_image)
+![QR Code](Avodot_QR_Code.png)
