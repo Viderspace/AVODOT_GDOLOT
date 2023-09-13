@@ -1,7 +1,7 @@
 # Art School Event Landing Page
 
-Developed a zero-cost, interactive landing page for an art school opening event, designed by artist Adam Wellingstein.
-
+A zero-cost, interactive landing page for Beit-Berl's art school opening event, 
+designed by artist Adam Wellingstein.
 
 ## Features:
 - **Interactive Animation**: User-activated inflating-letters effect via `Matter.js`.
@@ -12,3 +12,7 @@ Developed a zero-cost, interactive landing page for an art school opening event,
 - Backend powered by **Google's Apps-Script**.
 
 > Note: This small project was my initial dive into web development, with no prior experience.
+
+Check out the Published page with your mobile device:
+
+![QR Code](path_to_your_QR_code_image)
